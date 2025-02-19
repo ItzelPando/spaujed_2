@@ -1,5 +1,6 @@
 "use client"
 
+import { useRouter } from "next/navigation" 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
@@ -21,6 +22,7 @@ const loginSchema = z.object({
 type LoginFormValues = z.infer<typeof loginSchema>
 
 export default function Login() {
+  const router = useRouter()
   const {
     register,
     handleSubmit,
@@ -30,7 +32,7 @@ export default function Login() {
   })
 
   const onSubmit = (data: LoginFormValues) => {
-    console.log(data)
+    router.push("/dashboard")
     // Aquí iría la lógica para enviar los datos al servidor
   }
 
