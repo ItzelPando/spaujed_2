@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "SPAUJED",
     images: [
       {
-        url: "https://www.spaujed.org/og-image.jpg",
+        url: "/principal.jpg",
         width: 1200,
         height: 630,
         alt: "SPAUJED - Sindicato de Personal Académico de la UJED",

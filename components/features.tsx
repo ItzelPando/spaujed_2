@@ -6,24 +6,24 @@ const features = [
     title: "Negociamos",
     description:
       "A través de las negociaciones contractuales, perseguimos los mejores acuerdos para los trabajadores de la UJED.",
-    image: "https://placehold.co/600x400/red/white?text=Negociamos",
+    image: "https://www.spaujed.org/wp-content/uploads/2024/01/1.png",
   },
   {
     title: "Te impulsamos",
     description:
       "Realizamos actividades que permitan a nuestros agremiados desarrollarse en todos los ámbitos humanos y profesionales.",
-    image: "https://placehold.co/600x400/red/white?text=Te+impulsamos",
+    image: "https://www.spaujed.org/wp-content/uploads/2024/01/2.png",
   },
   {
     title: "Identidad",
     description: "Hacemos todo lo necesario para que no solo seas, sino que también te sientas parte del SPAUJED.",
-    image: "https://placehold.co/600x400/red/white?text=Identidad",
+    image: "https://www.spaujed.org/wp-content/uploads/2024/01/3.png",
   },
   {
     title: "Nos comprometemos",
     description:
       "Adoptamos una política de equidad, en la que sigamos compromisos que permiten avanzar en la protección de los derechos de las y los universitarios.",
-    image: "https://placehold.co/600x400/red/white?text=Nos+comprometemos",
+    image: "https://www.spaujed.org/wp-content/uploads/2024/01/4.png",
   },
 ]
 
@@ -39,12 +39,12 @@ export function Features() {
           {features.map((feature) => (
             <Card key={feature.title} className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <CardHeader className="p-0">
-                <div className="h-48 relative">
+                <div className="aspect-[16/9] relative">
                   <Image
-                    src={feature.image || "/placeholder.svg"}
+                    src={feature.image || ""}
                     alt={feature.title}
                     fill
-                    className="object-cover rounded-t-lg"
+                    className="object-cover object-top rounded-t-lg"
                   />
                 </div>
               </CardHeader>

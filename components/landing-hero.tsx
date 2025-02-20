@@ -7,7 +7,7 @@ export function LandingHero() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `url(https://placehold.co/1920x1080/red/white?text=SPAUJED+Hero)`,
+            backgroundImage: `url(https://www.spaujed.org/wp-content/uploads/2024/01/mAIN-scaled.jpg)`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
