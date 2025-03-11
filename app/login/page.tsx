@@ -85,12 +85,11 @@ export default function Login() {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div>
                 <Input
-                  type="email"
+                  type="number"
                   placeholder="Matricula"
-                  {...register("email")}
-                  className="w-full px-4 py-2 text-lg border rounded-md"
-                />
-                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
+                  {...register("matricula")}
+                  className="w-full px-4 py-2 text-lg border rounded-md"/>
+                {errors.matricula && <p className="text-red-500 text-sm mt-1">{errors.matricula.message}</p>}
               </div>
 
               <div className="relative">

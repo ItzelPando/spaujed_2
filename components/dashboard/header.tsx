@@ -3,8 +3,8 @@ import { Bell, User, LogOut } from "lucide-react"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { useAuth } from "@/lib/auth"
 
+
 export function DashboardHeader() {
-  const { logout } = useAuth()
 
   return (
     <header className="h-16 bg-white border-b flex items-center px-6">
@@ -24,14 +24,9 @@ export function DashboardHeader() {
               <User className="mr-2 h-4 w-4" />
               <span>Perfil</span>
             </DropdownMenuItem>
-            <DropdownMenuItem onSelect={logout}>
-              <LogOut className="mr-2 h-4 w-4" />
-              <span>Cerrar sesión</span>
-            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-    </header>
-  )
+    </header>
+  )
 }
-

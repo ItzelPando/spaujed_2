@@ -33,6 +33,12 @@ export function TramiteCreditoPersonal({ title, description }: TramiteCreditoPer
               <li>Interés para no ahorradores: 4%</li>
             </ul>
           </div>
+          <section>
+          <h3 className="text-xl font-semibold mb-4">NOTA PARA SUBIR EL PDF</h3>
+          <ul>
+            <li>El pdf debe ser subido con todos los documentos escaneados y legibles para tener una mejor atencia hacia usted</li>
+          </ul>
+          </section>
           <div>
             <h3 className="text-xl font-semibold mb-4">Requisitos</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-600">
