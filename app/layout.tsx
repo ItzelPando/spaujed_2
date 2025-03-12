@@ -5,13 +5,14 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import type React from "react"
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
     default: "SPAUJED - Sindicato de Personal Académico de la UJED",
-    template: "%s | SPAUJED",
+    template: "%s ",
   },
   description:
     "Sindicato de Personal Académico de la Universidad Juárez del Estado de Durango. Defendemos los derechos laborales y promovemos el desarrollo profesional de nuestros agremiados.",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "SPAUJED",
     images: [
       {
-        url: "/principal.jpg",
+        url: "https://www.spaujed.org/wp-content/uploads/2024/01/mAIN-scaled.jpg",
         width: 1200,
         height: 630,
         alt: "SPAUJED - Sindicato de Personal Académico de la UJED",
@@ -70,6 +71,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" suppressHydrationWarning>
+      <head>
+        {/* Configuración del chatbot */}
+        <Script id="chatling-config" strategy="beforeInteractive">
+          {`window.chtlConfig = { chatbotId: "5536344783" };`}
+        </Script>
+
+        {/* Script del chatbot */}
+        <Script 
+          async 
+          data-id="5536344783" 
+          id="chatling-embed-script" 
+          src="https://chatling.ai/js/embed.js"
+        />
+      </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {!isDashboardRoute() && <Navbar />}
