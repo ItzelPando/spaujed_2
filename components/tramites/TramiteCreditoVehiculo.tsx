@@ -103,17 +103,17 @@ export function TramiteCreditoVehiculo({ title, description, contenido }: Tramit
             <h3 className="text-xl font-semibold mb-4">NOTA IMPORTANTE:</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-600">
             <li>Identificación oficial vigente.</li>
-                  <li>PRUEBA</li>
-                  <li>PRUEBA</li>
-                  <li>PRUEBA</li>
-                  <li>PRUEBA</li>
-                  <li>PRUEBA</li>
-                  <li>PRUEBA</li>
-                  <li>PRUEBA</li>
+                  <li>Lista de espera aprox. 10 a 15 dias hábiles</li>
+                  <li>El préstamos está sujeto a autorización</li>
+                  <li>Se autorizan a académicos con titularidad de sus clases</li>
               {contenido.notasImportantes.map((nota, index) => (
                 <li key={index}>{nota}</li>
               ))}
             </ul>
+          </section>
+          <section>
+          <h3 className="text-xl font-semibold mb-4">*ADICIONAL AL DESCUENTO QUINCENAL SE DESCONTARA UN SEGURO DE DEUDOR</h3>
+          <ul className="list-disc list-inside space-y-2 text-gray-600"></ul>
           </section>
           <section>
           <h3 className="text-xl font-semibold mb-4">NOTA PARA SUBIR EL PDF</h3>
