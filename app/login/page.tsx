@@ -1,6 +1,6 @@
 "use client"
 
-import { useRouter } from "next/navigation" 
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
@@ -11,11 +11,12 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { useState } from "react"
 import { Eye, EyeOff } from "lucide-react"
+import { useAuth } from "@/lib/auth"
 
 // Definimos el esquema de validación con Zod
 const loginSchema = z.object({
-  email: z.string().email({ message: "Correo electrónico inválido" }),
-  password: z.string().min(6, { message: "La contraseña debe tener al menos 6 caracteres" }),
+  matricula: z.string().min(1, { message: "La matrícula es requerida" }), // Agregado para matricula
+  password: z.string().min(6, { message: "La contraseña debe tener al menos 6 caracteres" }), // Contraseña
 })
 
 // Inferimos el tipo TypeScript del esquema
@@ -83,19 +84,19 @@ export default function Login() {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div>
                 <Input
-                  type="email"
-                  placeholder="Correo Electrónico"
-                  {...register("email")}
+                  type="text" // Asegúrate de que el tipo es correcto según el campo
+                  placeholder="Matrícula"
+                  {...register("matricula")} // Cambiado a matricula
                   className="w-full px-4 py-2 text-lg border rounded-md"
                 />
-                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
+                {errors.matricula && <p className="text-red-500 text-sm mt-1">{errors.matricula.message}</p>}
               </div>
 
               <div className="relative">
                 <Input
                   type={showPassword ? "text" : "password"}
                   placeholder="Contraseña"
-                  {...register("password")}
+                  {...register("password")} // Sin cambios aquí
                   className="w-full px-4 py-2 text-lg border rounded-md pr-10"
                 />
                 <button
@@ -163,4 +164,3 @@ export default function Login() {
     </div>
   )
 }
-
