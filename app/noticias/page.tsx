@@ -114,6 +114,30 @@ const noticias = [
     fecha: "21 de Enero de 2024",
     categoria: "Noticias y Eventos",
   },
+  {
+    id: 14,
+    titulo: "Resultados y formato de retabulación",
+    descripcion: "Este lunes 8 de enero, el SPAUJED inició el acopio de prendas invernales...",
+    imagen: "/Resultados de Retabulación 2024_page-0001.jpg",
+    fecha: "noviembre 8, 2024",
+    categoria: "Noticias y Eventos",
+  },
+  {
+    id: 15,
+    titulo: "Beneficios de nómina Banamex",
+    descripcion: "Este lunes 8 de enero, el SPAUJED inició el acopio de prendas invernales...",
+    imagen: "/Promo Gana un Auto Sep 24_page-0001.jpg",
+    fecha: "21 de Enero de 2024",
+    categoria: "Créditos y Beneficios",
+  },
+  {
+    id: 16,
+    titulo: "Concursos por oposición",
+    descripcion: "Este lunes 8 de enero, el SPAUJED inició el acopio de prendas invernales...",
+    imagen: "/CONCURSO POR OPOSICION FECA A2024_page-0001.jpg",
+    fecha: "7 de Febrero de 2024",
+    categoria: "Convenios y Contratos",
+  },
 ];
 
 export default function NoticiasPage() {

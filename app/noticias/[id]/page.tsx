@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation"
+import { useRouter } from "next/router"
 
 const noticias = [
     {
@@ -174,6 +175,26 @@ const noticias = [
     fecha: "9 de Enero de 2024",
     categoria: "Noticias y Eventos",
   },
+  {
+    id: 14,
+    titulo: " Resultados y formato de retabulación",
+    fecha: "noviembre 8, 2024",
+    categoria: "Noticias y Eventos",
+  },
+  {
+    id: 15,
+    titulo: " Beneficios de nómina Banamex",
+    imagen: "/Promo Gana un Auto Sep 24_page-0001.jpg",
+    fecha: "9 de Enero de 2024",
+    categoria: "Créditos y Beneficios",
+  },
+  {
+    id: 16,
+    titulo: "Concursos por oposición",
+    fecha: "7 de Febrero de 2024",
+    categoria: "Convenios y Contratos",
+  },
+  
 ]
 
 export default function NoticiaPage({ params }: { params: { id: string } }) {
@@ -203,12 +224,32 @@ export default function NoticiaPage({ params }: { params: { id: string } }) {
                 <div className="mb-6">
                     {/* Previsualización del documento de Google Drive para id=11 */}
                     <iframe
-                        src="https://drive.google.com/file/d/1kVF78q1ZRfA-u2TF55l3CE6kCmgUSiE7/view"
+                        src="https://drive.google.com/file/d/1kVF78q1ZRfA-u2TF55l3CE6kCmgUSiE7/preview"
                         width="100%"
                         height="500px"
                         allow="autoplay"
                     ></iframe>
                 </div>
+                ) : noticia.id === 14 ? (
+                    <div className="mb-6">
+                        {/* Previsualización del documento de Google Drive para id=14 */}
+                        <iframe
+                            src="https://drive.google.com/file/d/1zPQoyH-f2V1BPQgCLmXaM-RebpAW1hcq/preview"
+                            width="100%"
+                            height="500px"
+                            allow="autoplay"
+                        ></iframe>
+                    </div>
+                ) : noticia.id === 16 ? (
+                    <div className="mb-6">
+                        {/* Previsualización del documento de Google Drive para id=16 */}
+                         <iframe
+                            src="https://drive.google.com/file/d/1YyCFqVKCWdpf93zi6Wcf8siRjFYyrRLH/preview"
+                            width="100%"
+                            height="500px"
+                            allow="autoplay"
+                        ></iframe>
+                    </div>
             ) : (
                 // Para todas las demás noticias, se muestra la imagen
                 <img
@@ -216,6 +257,8 @@ export default function NoticiaPage({ params }: { params: { id: string } }) {
                     alt={noticia.titulo}
                     className="w-full h-screen object-contain"
                 />
+                
+    
             )}
 
             {/* Contenido de la noticia */}
@@ -312,7 +355,7 @@ export default function NoticiaPage({ params }: { params: { id: string } }) {
                             target="_blank"
                             className="bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-400"
                         >
-                            ontrato colectivo 2023
+                            Contrato colectivo 2023
                         </a>
                         <a
                             href="https://drive.google.com/file/d/1SmUQPI2z4pBqxS45Sfa-TMZ-aSitaxII/view"
@@ -331,6 +374,84 @@ export default function NoticiaPage({ params }: { params: { id: string } }) {
                     </div>
                 </div>
             )}
+
+{noticia.id === 14 && (
+  <div className="mt-6">
+    <h3 className="text-xl font-semibold mb-4">Accede a los Resultados y Formato:</h3>
+    <ul className="list-none space-y-4">
+      <li>
+        <a
+          href="https://drive.google.com/file/d/1zPQoyH-f2V1BPQgCLmXaM-RebpAW1hcq/view"
+          target="_blank"
+          className="bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-400 inline-block"
+        >
+          Resultados de retabulación 2024
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://drive.google.com/file/d/1zVzoTN_oAc1Uj7Kjm_Zs4DD11gsT3eKc/view"
+          target="_blank"
+          className="bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-400 inline-block"
+        >
+          Formato de retabulación
+        </a>
+      </li>
+    </ul>
+  </div>
+)}
+
+{noticia.id === 15 && (
+    <div className="mt-6">
+        <h3 className="text-xl font-semibold mb-4">Accede a los diferentes Beneficios:</h3>
+        <ul className="space-y-4">
+            {[
+                { text: "Promoción Gana un Auto", link: "https://drive.google.com/file/d/13JH4T9aawzIraDi_OfDoP1xr0k4qomRf/view" },
+                { text: "Reclamación de Siniestro", link: "https://drive.google.com/file/d/1H88IGBBMTKck6kwf-JGw53Dt1u-6ccXZ/view" },
+                { text: "Seguro de Vida", link: "https://drive.google.com/file/d/1xf1areH01hmK49xvaWsTcMImsyyq3A9s/view" },
+                { text: "Reclamo por Muerte Accidental", link: "https://drive.google.com/file/d/105G3rHtsJV04wNJqnBp-QVtAmPwcqHHG/view" },
+                { text: "Seguro de Accidentes", link: "https://drive.google.com/file/d/1M0VkzTcCHF6rlHsXbPXJjP6tTA420jIU/view" },
+                { text: "Paquetes de Asistencia", link: "https://drive.google.com/file/d/1hGo9iq2mqMk5-Y9WVrZKbJjWvwgqFXPR/view" },
+                { text: "Folleto de Asistencias 2024", link: "https://drive.google.com/file/d/1ntv9yP0OF_4FpuHRuTBEhpKcx8QsGoaF/view" },
+                { text: "Seguro de Vida UJED", link: "https://drive.google.com/file/d/1YMLeZhpEpBaQctZwkzG7Pv6OOaKQ7aWq/view" },
+                { text: "Seguro de Muerte Accidental UJED", link: "https://drive.google.com/file/d/1YMLeZhpEpBaQctZwkzG7Pv6OOaKQ7aWq/view" }
+            ].map((item, index) => (
+                <li key={index}>
+                    <a
+                        href={item.link}
+                        target="_blank"
+                        className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-400 inline-block"
+                    >
+                        {item.text}
+                    </a>
+                </li>
+            ))}
+        </ul>
+    </div>
+            )}
+
+{noticia.id === 16 && (
+    <div className="mt-6">
+        <h3 className="text-xl font-semibold mb-4">Accede a los Concursos:</h3>
+        <ul className="space-y-3">
+            {[
+                { text: "Concurso por oposición FECA", link: "https://drive.google.com/file/d/1YyCFqVKCWdpf93zi6Wcf8siRjFYyrRLH/view" },
+                { text: "Concurso por oposición Instituto de Ciencias Sociales", link: "https://drive.google.com/file/d/12UGm3JSFhN-yKZRs1friy12pYM0NOG5G/view" },
+                { text: "Concurso por oposición Colegio de Ciencias y Humanidades", link: "https://drive.google.com/file/d/1fYwRZL4II4Jxceh05lMZ1lK5w272bAjt/view" }
+            ].map((item, index) => (
+                <li key={index}>
+                    <a
+                        href={item.link}
+                        target="_blank"
+                        className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-400 inline-block"
+                    >
+                        {item.text}
+                    </a>
+                </li>
+            ))}
+        </ul>
+    </div>
+)}
 
         </main>
     );

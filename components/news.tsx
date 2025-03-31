@@ -1,24 +1,30 @@
+"use client"
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
+import Link from "next/link"  // Importa el componente Link de Next.js
 
 const news = [
   {
+    id: 14,
     title: "Resultados y formato de retabulación",
     date: "noviembre 8, 2024",
     description: "Resultados de retabulación 2024",
-    image: "https://placehold.co/600x400/red/white?text=Noticia+1",
+    image: "/Resultados de Retabulación 2024_page-0001.jpg",
   },
   {
+    id: 15,
     title: "Beneficios de nómina Banamex",
     date: "mayo 13, 2024",
-    description: "Promoción Gana un Auto Reclamación de Siniestro",
-    image: "https://placehold.co/600x400/red/white?text=Noticia+2",
+    description: "Promoción Gana un Auto, etc.",
+    image: "/Promo Gana un Auto Sep 24_page-0001.jpg",
   },
   {
+    id: 16,
     title: "Concursos por oposición",
     date: "febrero 7, 2024",
     description: "Febrero de 2024: Concurso por oposición",
-    image: "https://placehold.co/600x400/red/white?text=Noticia+3",
+    image: "/CONCURSO POR OPOSICION FECA A2024_page-0001.jpg",
   },
 ]
 
@@ -29,27 +35,28 @@ export function News() {
         <h2 className="text-3xl font-bold mb-12">Últimas noticias</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {news.map((item) => (
-            <Card key={item.title} className="hover:shadow-lg transition-shadow">
-              <div className="h-48 relative">
-                <Image
-                  src={item.image || "/placeholder.svg"}
-                  alt={item.title}
-                  fill
-                  className="object-cover rounded-t-lg"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-xl">{item.title}</CardTitle>
-                <p className="text-sm text-gray-500">{item.date}</p>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">{item.description}</p>
-              </CardContent>
-            </Card>
+            <Link key={item.id} href={`/noticias/${item.id}`} passHref>
+              <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="h-48 relative">
+                  <Image
+                    src={item.image || "/placeholder.svg"}
+                    alt={item.title}
+                    fill
+                    className="object-cover rounded-t-lg"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-xl">{item.title}</CardTitle>
+                  <p className="text-sm text-gray-500">{item.date}</p>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600">{item.description}</p>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
     </section>
   )
 }
-
