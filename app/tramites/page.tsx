@@ -118,8 +118,6 @@ export default function TramitesPage() {
                       title={selectedTramite.title}
                       description={selectedTramite.description} icon={"symbol"} requisitos={[]} proceso={[]}              />
             )}
-            {/* Botón de subir PDF */}
-            <UploadPDFButton />
           </main>
         </div>
       </div>

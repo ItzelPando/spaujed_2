@@ -44,10 +44,6 @@ export function TramiteCreditoPersonal({ title, description }: TramiteCreditoPer
             </ul>
           </div>
           <section>
-          <h3 className="text-xl font-semibold mb-4">NOTA PARA SUBIR EL PDF</h3>
-          <ul>
-            <li>El pdf debe ser subido con todos los documentos escaneados y legibles para tener una mejor atencia hacia usted</li>
-          </ul>
           </section>
         </div>
       </div>

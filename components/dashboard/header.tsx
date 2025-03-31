@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+ import { Button } from "@/components/ui/button"
 import { Bell, User, LogOut } from "lucide-react"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { useAuth } from "@/lib/auth"
@@ -8,7 +8,7 @@ export function DashboardHeader() {
 
   return (
     <header className="h-16 bg-white border-b flex items-center px-6">
-      <h1 className="text-xl font-semibold text-gray-800">Resumen</h1>
+      <h1 className="text-xl font-semibold text-gray-800">CREDITOS</h1>
       <div className="ml-auto flex items-center space-x-2">
         <Button variant="ghost" size="icon" className="text-gray-500 hover:text-gray-700">
           <Bell className="h-5 w-5" />

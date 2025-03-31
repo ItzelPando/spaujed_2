@@ -1,44 +1,53 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+"use client";
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useRouter } from "next/navigation";
+import { Car, Home, User, Glasses } from "lucide-react"; // Importamos los iconos
 
 export default function DashboardPage() {
+  const router = useRouter();
+
+  const navigateTo = (path: string) => {
+    router.push(path);
+  };
+
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-6">Resumen</h2>
+      <h2 className="text-2xl font-bold mb-6">CREDITOS</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card>
+      <Card className="cursor-pointer" onClick={() => navigateTo("/dashboard/credito-autos")}>
           <CardHeader>
-            <CardTitle>Total de Miembros</CardTitle>
+            <CardTitle>CREDITO DE AUTOS</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold">1,234</p>
+            <Car className="w-8 h-8 mx-auto mt-2 text-gray-500" /> {/* Icono de auto */}
           </CardContent>
         </Card>
-        <Card>
+        <Card className="cursor-pointer" onClick={() => navigateTo("/dashboard/credito-hipotecario")}>
           <CardHeader>
-            <CardTitle>Documentos Activos</CardTitle>
+            <CardTitle>CREDITO HIPOTECARIO</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold">56</p>
+            <Home className="w-8 h-8 mx-auto mt-2 text-gray-500" /> {/* Icono de casa */}
           </CardContent>
         </Card>
-        <Card>
+        <Card className="cursor-pointer" onClick={() => navigateTo("/dashboard/credito-personal")}> 
           <CardHeader>
-            <CardTitle>Solicitudes Pendientes</CardTitle>
+            <CardTitle>CREDITO PERSONAL</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold">23</p>
+            <User className="w-8 h-8 mx-auto mt-2 text-gray-500" /> {/* Icono de usuario */}
           </CardContent>
         </Card>
-        <Card>
+        <Card className="cursor-pointer" onClick={() => navigateTo("/dashboard/credito-lentes")}> 
           <CardHeader>
-            <CardTitle>Eventos Próximos</CardTitle>
+            <CardTitle>CREDITO LENTES</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold">3</p>
+            <Glasses className="w-8 h-8 mx-auto mt-2 text-gray-500" /> {/* Icono de lentes */}
           </CardContent>
         </Card>
       </div>
     </div>
-  )
+  );
 }
-

@@ -46,13 +46,7 @@ export function TramiteCreditoHipotecario({ title, description }: TramiteCredito
                   <li>Últimos 2 talones de pago.</li>
                   <li>Llenar formato 1.</li>
                 </ul>
-              </section>
-              <section>
-          <h3 className="text-xl font-semibold mb-4">NOTA PARA SUBIR EL PDF</h3>
-          <ul>
-            <li>El pdf debe ser subido con todos los documentos escaneados y legibles para tener una mejor atencia hacia usted</li>
-          </ul>
-          </section>
+              </section>  
             </div>
           </div>
           <div>

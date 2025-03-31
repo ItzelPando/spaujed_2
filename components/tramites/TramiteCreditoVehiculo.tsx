@@ -116,10 +116,6 @@ export function TramiteCreditoVehiculo({ title, description, contenido }: Tramit
           <ul className="list-disc list-inside space-y-2 text-gray-600"></ul>
           </section>
           <section>
-          <h3 className="text-xl font-semibold mb-4">NOTA PARA SUBIR EL PDF</h3>
-          <ul>
-            <li>El pdf debe ser subido con todos los documentos escaneados y legibles para tener una mejor atencia hacia usted</li>
-          </ul>
           </section>
         </div>
       </div>

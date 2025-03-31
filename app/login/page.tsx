@@ -84,24 +84,10 @@ export default function Login() {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div>
                 <Input
-<<<<<<< HEAD
-<<<<<<< HEAD
                   type="number"
                   placeholder="Matricula"
                   {...register("matricula")}
                   className="w-full px-4 py-2 text-lg border rounded-md"/>
-=======
-                  type="text"
-                  placeholder="Matricula"
-                  {...register("matricula")}
-=======
-                  type="text" // Asegúrate de que el tipo es correcto según el campo
-                  placeholder="Matrícula"
-                  {...register("matricula")} // Cambiado a matricula
->>>>>>> 3f3860792d55ece599ba48ee62058c4420260188
-                  className="w-full px-4 py-2 text-lg border rounded-md"
-                />
->>>>>>> 2fc1b4f2c379c6204dcdb4c4808dd259ab7d3eb3
                 {errors.matricula && <p className="text-red-500 text-sm mt-1">{errors.matricula.message}</p>}
               </div>
 
